@@ -1,0 +1,32 @@
+### Recuperar todas las películas
+GET http://localhost:1234/movies
+
+### Recuperar película por id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar películas por género
+GET http://localhost:1234/movies?genre=drama
+
+### Crear una película
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Godfather",
+    "year": 1972,
+    "director": "Francis Ford Coppola",
+    "duration": 142,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": [
+        "Drama"
+    ],
+    "rate": 9.3
+}
+
+### Actualizar película
+PATCH  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1994
+}
